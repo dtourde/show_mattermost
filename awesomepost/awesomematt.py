@@ -42,7 +42,6 @@ class AwesomePost():
 
     def count_down(self, count, end_message="GO !!!", between_delay=1, delete_delay=0):
         post = self.create_post(str(count))
-        print("--------------------- DEBUG: count_down postvar : \n{}".format(post))
         for i in reversed(range(0, count)):
             self.update_post(post['id'], str(i))
             sleep(between_delay)
